@@ -1,4 +1,3 @@
-[sourcecode language= »javascript »]
 function digitCheck(x,y) {
 var digitsOld = splitToArray(x),
 digitsNew = splitToArray(y);
@@ -8,4 +7,3 @@ animateDigit(i, digitsOld[i], digitsNew[i]);
 }
 }
 }
-[/sourcecode]
