@@ -1,3 +1,9 @@
+.countdownHolder{
+…
+font: 40px/1.5 ‘Open Sans Condensed’,sans-serif;
+…
+}
+
 .digit.static {
 // Permet d’ajouter une ombre portée sur n’importe quel élément HTML
 box-shadow:1px 1px 1px rgba(4, 4, 4, 0.35);
