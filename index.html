@@ -26,50 +26,45 @@
 								<hr />
 								<p>Another fine freebie by HTML5 UP</p>
 
-								  <script language="JavaScript">
-                
-                function t()
-                {
-            var compteur=document.getElementById('compteur');
-            s=duree;
-            m=0;h=0;
-            if(s<0)
-                        {
-                                compteur.innerHTML="terminé<br />"+"<a href=http://lien1.fr>continuer</a>"
-            }
-                        else
-                        {
-                                if(s>59)
-                                {
-                                        m=Math.floor(s/60);
-                                        s=s-m*60
-                }
-                                if(m>59)
-                                {
-                                        h=Math.floor(m/60);
-                    m=m-h*60
-                                }
-                if(s<10)
-                                {
-                                        s="0"+s
-                }
-                if(m<10)
-                                {
-                    m="0"+m
-                }
-                  compteur.innerHTML=h+":"+m+":"+s+"<br /><a href=http://lien2.fr>interrompre</a>"
-            }
-            duree=duree-1;
-            window.setTimeout("t();",999);
-
-        }
-                
-                </script>
-                <div id="compteur"></div>
-                <script language="JavaScript">
-                        duree="90";
-                        t();
-                </script>
+							[sourcecode language= »HTML »]
+<div id="countdown" class="countdownHolder">
+<span class="countDays">
+<span class="position">
+<span class="digit static"></span>
+</span>
+<span class="position">
+<span class="digit static"></span>
+</span>
+</span>
+<span class="countDiv countDiv0"></span>
+<span class="countHours">
+<span class="position">
+<span class="digit static"></span>
+</span>
+<span class="position">
+<span class="digit static"></span>
+</span>
+</span>
+<span class="countDiv countDiv1"></span>
+<span class="countMinutes">
+<span class="position">
+<span class="digit static"></span>
+</span>
+<span class="position">
+<span class="digit static"></span>
+</span>
+</span>
+<span class="countDiv countDiv2"></span>
+<span class="countSeconds">
+<span class="position">
+<span class="digit static"></span>
+</span>
+<span class="position">
+<span class="digit static"></span>
+</span>
+</span>
+</div>
+[/sourcecode]
 
 							</header>
 							<footer>
