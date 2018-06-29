@@ -1,29 +1,27 @@
-function date_heure(id)
-{
-        date = new Date;
-        annee = date.getFullYear();
-        moi = date.getMonth();
-        mois = new Array('Janvier', 'F&eacute;vrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Ao&ucirc;t', 'Septembre', 'Octobre', 'Novembre', 'D&eacute;cembre');
-        j = date.getDate();
-        jour = date.getDay();
-        jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
-        h = date.getHours();
-        if(h<10)
-        {
-                h = "0"+h;
-        }
-        m = date.getMinutes();
-        if(m<10)
-        {
-                m = "0"+m;
-        }
-        s = date.getSeconds();
-        if(s<10)
-        {
-                s = "0"+s;
-        }
-        resultat = 'Nous sommes le '+jours[jour]+' '+j+' '+mois[moi]+' '+annee+' il est '+h+':'+m+':'+s;
-        document.getElementById(id).innerHTML = resultat;
-        setTimeout('date_heure("'+id+'");','1000');
-        return true;
+// On récupère l’élément ‘note’ dans lequel on va inscrire des informations
+var note = $(‘#note’);
+// Création de l’objet ‘date’ (année / mois / jour) ici initialisé au : 9 mars 2012
+// Attention les mois commencent à 0 !
+
+var ts = new Date(2012, 2, 9);
+$(‘#countdown’).countdown({
+timestamp       : ts,
+callback        : function(days, hours, minutes, seconds){
+…
 }
+});
+
+var message = "";
+message += days + " jour" + ( days==1 ?  »:’s’ ) + ", ";
+message += hours + " heur" + ( hours==1 ?  »:’s’ ) + ", ";
+message += minutes + " minute" + ( minutes==1 ?  »:’s’ ) + " and ";
+message += seconds + " seconde" + ( seconds==1 ?  »:’s’ ) + " <br />";
+
+if (newYear) {
+message += "avant l’événement !";
+}
+else {
+message += "Il ne reste plus 10 jours à partir de maintenant !";
+}
+
+note.html(message);
