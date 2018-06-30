@@ -29,6 +29,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.mon_image {
+float: left;
+}
+
 body {
 	line-height: 1;
 }
