@@ -7,10 +7,17 @@
 .map .overlay{
 	width:1000px;
 	height:547px;
-	background:url(map.png) left top no-repeat;
+	background:url(map.png) 1000px top no-repeat;
 	position:absolute;
 	top:0;
 	left:0;
+	z-index:1;
+}
+.map img{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
 }
 .mon_image {
 float: left;
