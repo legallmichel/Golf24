@@ -2,8 +2,14 @@
 	width:1000px;
 	height:547px;
 	background:url(map.png) left top no-repeat;
+	position:relative;
 }
-
+.map .overlay{
+	width:1000px;
+	height:547px;
+	background:url(map.png) left top no-repeat;
+	position:absolute;
+}
 .mon_image {
 float: left;
 }
