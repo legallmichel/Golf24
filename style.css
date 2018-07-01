@@ -1,7 +1,7 @@
 .map{
 	width:1000px;
 	height:547px;
-	background:url(map.png) left top no-repeat;
+	background:url(map.png) 1000px top no-repeat;
 	position:relative;
 }
 .map .overlay{
