@@ -16,12 +16,6 @@
 			jQuery(function($){ 
 				$('.map').append('<div class="overlay">').append('<div class="tooltip">Salut les gens</div>');
 				//tooltip qui suit la souris
-				$(document).mousemove(function(e){
-					$('.map .tooltip').css({
-						top:e.pageY;
-						left:e.pageX;
-					});
-				});
 
 				$('.map area').mouseover(function(){
 					var index=$(this).index();
@@ -76,7 +70,7 @@
 							<div class="map">
 								<img src="void.png" width="1000px" height="547px" usemap="Map" />
 								<map name="Map">
-									<area shape="rect" coords="500,250,1000,547" href="#">
+									<area shape="circle" coords="500,250,10" href="perigueux.html">
 								</map>
 							</div>
 							
