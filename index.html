@@ -17,10 +17,10 @@
 				$('.map').append('<div class="overlay">');
 				$('.map.area').mouseover(function(){
 					var index=$(this).index();
-					var left=-index*1000-1000
+					var left=-index*1000-1000;
 					$('.map .overlay').css({
 						backgroundPosition: left+"px 0px"
-					})
+					});
 				});
 			});
 		</script>
@@ -60,7 +60,7 @@
 							</header>
 							<!--carte interactive-->
 							<div class="map">
-								<img src="void.png" width="1000" height="547"
+								<img src="map.png" width="1000" height="547"
 							</div>
 							
 							<!-- Fin carte interactive -->
