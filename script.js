@@ -1,36 +1,64 @@
-// On récupère l’élément ‘note’ dans lequel on va inscrire des informations
-var note = $(‘#note’);
-// Création de l’objet ‘date’ (année / mois / jour) ici initialisé au : 9 mars 2012
-// Attention les mois commencent à 0 !
-var ts = new Date(2012, 2, 9);
+.map{
+	width:1000px;
+	height:547px;
+	background:url(map.png) left top no-repeat;
+	position:relative;
+}
+.map .overlay{
+	width:1000px;
+	height:547px;
+	background:url(map.png) left top no-repeat;
+	position:absolute;
+	z-index:1;
+}
+.map img{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+.mon_image {
+float: left;
+}
 
-$(‘#countdown’).countdown({
-timestamp	: ts,
-callback	: function(days, hours, minutes, seconds){
+countdownHolder{
+…
+font: 40px/1.5 ‘Open Sans Condensed’,sans-serif;
 …
 }
-});
 
-function digitCheck(x,y) {
-var digitsOld = splitToArray(x),
-digitsNew = splitToArray(y);
-for (var i = 0, c = digitsNew.length; i < c; i++){
-if (digitsNew[i] != digitsOld[i]){
-animateDigit(i, digitsOld[i], digitsNew[i]);
-}
-}
-}
-var message = "";
-message += days + " jour" + ( days==1 ?  »:’s’ ) + ", ";
-message += hours + " heur" + ( hours==1 ?  »:’s’ ) + ", ";
-message += minutes + " minute" + ( minutes==1 ?  »:’s’ ) + " and ";
-message += seconds + " seconde" + ( seconds==1 ?  »:’s’ ) + " <br />";
+.digit.static {
+// Permet d’ajouter une ombre portée sur n’importe quel élément HTML
+box-shadow:1px 1px 1px rgba(4, 4, 4, 0.35);
+// La valeur linear-gradient de la propriété background-image permet de générer
+// des arrière-plans de couleur dégradée, d’une couleur à l’autre ou via plusieurs
+// couleurs intermédiaires
+// La notation est la suivante : (orientation du dégradé (top/right/bottom/left),
+//	couleurs (position en %))
+background-image: linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -o-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -moz-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -webkit-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -ms-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
 
-if (newYear) {
-message += "avant l’événement !";
-}
-else {
-message += "Il ne reste plus 10 jours à partir de maintenant !";
+background-image: -webkit-gradient(
+linear,
+left bottom,
+left top,
+color-stop(0.5, #3A3A3A),
+color-stop(0.5, #444444)
+);
 }
 
-note.html(message);
+.digit{
+position:absolute;
+display:block;
+width:1em;
+background-color:#444;
+border-radius:0.2em;
+text-align:center;
+// couleur des chiffres
+color:#fff;
+letter-spacing:-1px;
+}
+ 
