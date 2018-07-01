@@ -1,13 +1,13 @@
 .map{
 	width:1000px;
 	height:547px;
-	background:url(map.png) left top no-repeat;
+	background:green left top no-repeat;
 	position:relative;
 }
 .map .overlay{
 	width:1000px;
 	height:547px;
-	background:url(map.png) 1000px top no-repeat;
+	background:green 1000px top no-repeat;
 	position:absolute;
 	top:0;
 	left:0;
