@@ -13,7 +13,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>
 		<script type="text/javascript">
-			jQuery(document).ready(function($){
+			jQuery(function($){
 				$('.map').append('<div class="overlay">');
 				$('.map.area').mouseover(function(){
 					var index=$(this).index();
@@ -61,10 +61,7 @@
 							</header>
 							<!--carte interactive-->
 							<div class="map">
-								<img src="void.png" width="1000px" height="547px" usemap="Map"/>
-								<map name="Map">
-									<area shape="rect" coords="0,0,1000,547" href="perigueux.html" alt=""/>
-								</map>
+								<img src="void.png" width="1000px" height="547px" />
 							</div>
 							
 							<!-- Fin carte interactive -->
